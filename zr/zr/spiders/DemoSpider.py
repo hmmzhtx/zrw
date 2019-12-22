@@ -8,7 +8,7 @@ from scrapy.http import Request
 
 class DemoSpider(CrawlSpider):
     name = 'DemoSpider'
-    host = 'https://www.wujuzi.com'
+    host = 'http://www.baidu.com'
 
     logging.getLogger("requests").setLevel(logging.WARNING)  # 将requests的日志级别设成WARNING
     logging.basicConfig(
@@ -21,7 +21,7 @@ class DemoSpider(CrawlSpider):
 
     # test = True
     def start_requests(self):
-        yield Request(url='https://www.wujuzi.com',callback=self.parse_ph_info)
+        yield Request(url='http://www.baidu.com',callback=self.parse_ph_info)
 
     def parse_ph_info(self, response):
         phItem = ZrItem()

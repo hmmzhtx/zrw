@@ -41,7 +41,7 @@ class ProxyMiddleware(object):
     def get_random_proxy(self):
         '''随机从文件中读取proxy'''
         while 1:
-            with open('C:\Users\huangmingming\PycharmProjects\zrw\GetProxy\proxies.txt', 'r') as f:
+            with open('C:\Users\huangmingming\PycharmProjects\zrw\zrw\GetProxy\proxies.txt', 'r') as f:
                 proxies = f.readlines()
             if proxies:
                 break
